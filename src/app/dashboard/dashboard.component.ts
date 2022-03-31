@@ -21,9 +21,7 @@ export class DashboardComponent implements OnInit {
   loadCountries() {
     this.dashboardService.getCountries().subscribe(arg => {
       this.data = arg;
-      this.regionArr = this.getRegionArr(arg)
-      console.log(this.regionArr);
-
+      this.regionArr = this.getRegionArr(arg);
     });
   }
 
