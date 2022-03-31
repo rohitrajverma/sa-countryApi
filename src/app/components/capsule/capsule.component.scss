@@ -1,0 +1,23 @@
+.capsule-container {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    .names {
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        background-color: var(--theme-background);
+        color: var(--theme-color);
+        min-width: 70px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: solid transparent;
+        box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+        margin: 6px;
+        padding: 3px;
+    }
+    .noNeighbour {
+        cursor: default;
+        font-weight: 300;
+    }
+}

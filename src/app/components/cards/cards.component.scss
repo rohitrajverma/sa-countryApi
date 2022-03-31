@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.card {
+    background: var(--theme-background);
+    box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    width: 280px;
+    height: 350px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.card-header img {
+    width: 100%;
+    object-fit: cover;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 150px;
+}
+.card-body p {
+    font-size: 14px;
+    margin: 0 0 4px;
+}
+
+
+@media screen and (max-width: 375px) {
+    .card {
+    width: 90%;
+    }
+  }

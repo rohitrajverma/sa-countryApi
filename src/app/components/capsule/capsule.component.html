@@ -1,0 +1,11 @@
+<div class="capsule-container">
+<ng-container *ngIf="!noNeighbours;else default"></ng-container>
+    <ng-container *ngFor="let item of countryInfo">
+        <div routerLink="/details/{{item.cca2}}" class="names">{{item.name.common}}</div>
+    </ng-container>
+
+    <ng-template #default>
+        <div class="noNeighbour">No Neighbours</div>
+    </ng-template>
+
+</div>

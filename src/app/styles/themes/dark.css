@@ -1,0 +1,4 @@
+:root[theme=dark] {
+  --theme-background: hsl(207, 26%, 17%);
+  --theme-color: hsl(0, 0%, 100%);
+}

@@ -1,0 +1,39 @@
+.parent {
+  margin: 0 5%;
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .cards {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+
+}

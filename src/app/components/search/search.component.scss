@@ -1,0 +1,30 @@
+.search-input {
+    height: 50px;
+    background-color: var(--theme-background);
+    color: var(--theme-color);
+    outline: none;
+    width: 430px;
+    margin-top: 5px;
+    text-indent: 45px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: solid transparent;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left{
+    position: absolute;
+    left: 20px;
+    top: 22px;
+}
+
+.box{
+    position: relative;
+}
+
+
+@media screen and (max-width: 375px) {
+    .search-input {
+    width: 100%;
+    }
+  }

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card" routerLink="/details/{{countryInfo.cca2}}">    
+        <div class="card-header">
+            <img [src]="countryInfo.flags.svg" alt="rover" />
+        </div>
+        <div class="card-body">
+            <h4>
+                {{countryInfo.name.common}}
+            </h4>
+            <p>
+                Population:{{countryInfo.population}}
+            </p>
+            <p>
+                Region:{{countryInfo.region}}
+            </p>
+            <p>
+                Capital:{{countryInfo.capital ? countryInfo.capital.join(','):'not available'}}
+            </p>
+
+        </div>
+    </div>
+</div>

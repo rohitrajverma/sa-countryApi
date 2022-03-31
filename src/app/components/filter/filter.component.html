@@ -1,0 +1,18 @@
+<!-- <select [(ngModel)]="selectedCity" (ngModelChange)="onChangeofOptions($event)">
+    <option [ngValue]="null" selected disabled hidden>Select</option>
+    <option value="" selected="true">Select Region</option>
+
+    <option value="europe">One</option>
+    <option value="ame">Two</option>
+    <option value="Americas">Three</option>
+</select> -->
+
+
+
+ <ng-select [items]="options" 
+            bindLabel="name" 
+            bindValue="id" 
+            placeholder="Filter by Region"
+            (ngModelChange)="onChangeofOptions($event)"
+            [(ngModel)]="selectedCity">
+ </ng-select>

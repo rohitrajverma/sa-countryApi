@@ -1,0 +1,47 @@
+<div class="parent">
+
+    <div class="back">
+        <div class="box">
+            <i class="fa-solid fa-arrow-left left"></i>
+            <input type="button" value="Back" routerLink="/home">
+        </div>
+
+    </div>
+
+    <div class="container" *ngIf="countryInfo">
+
+        <div class="flag">
+            <img [src]="countryInfo[0].flags.svg" alt="flag" />
+        </div>
+
+        <div class="details">
+            <div class="details-name">
+                {{countryInfo[0].name.common}}
+            </div>
+            <div class="details-info">
+                <div>
+                    <div> <span>Native Name:</span>{{countryInfo[0].name.nativeName | nativeName}}</div>
+                    <div><span>Population:</span>{{countryInfo[0].population}} </div>
+                    <div> <span>Region:</span>{{countryInfo[0].region}} </div>
+                    <div><span>Sub Region:</span>{{countryInfo[0].subregion}}</div>
+                    <div><span>Capital:</span> {{countryInfo[0].capital ? countryInfo[0].capital.join(', '): 'No
+                        Capital'}}
+                    </div>
+                </div>
+                <div>
+                    <div><span>Top Level Domain:</span> {{countryInfo[0].tld.join(', ')}}</div>
+                    <div *ngIf="countryInfo[0].currencies"><span>Currencies:</span> {{countryInfo[0].currencies |
+                        currency}}</div>
+                    <div *ngIf="countryInfo[0].languages"><span>Languages:</span>
+                        {{Object.values(countryInfo[0].languages).join(', ')}}</div>
+                </div>
+            </div>
+            <div class="border-countries">
+                <span>Border Countries:
+                    <app-capsule [data]="countryInfo[0].borders"></app-capsule>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>

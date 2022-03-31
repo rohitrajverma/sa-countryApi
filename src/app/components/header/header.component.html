@@ -1,0 +1,18 @@
+<header>
+<div class="container">
+    <div class="title">Where in the World?</div>
+    <label>
+        <input type="checkbox" name="dark" [(ngModel)]="dark" />
+        <div class="container">
+            <div *ngIf="dark" class="sun sun-logo">
+                <i class="fas fa-sun"></i>
+                <span> Light Mode</span>
+            </div>
+            <div *ngIf="!dark" class="moon moon-logo">
+                <i class="fas fa-moon"></i>
+                <span> Dark Mode</span>
+            </div>
+        </div>
+    </label>
+</div>
+</header>
