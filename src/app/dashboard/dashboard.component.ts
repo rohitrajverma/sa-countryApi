@@ -5,22 +5,22 @@ import { ICountries } from './dashboard-services/dashboard.model';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+  data: ICountries[];
+  query: string;
+  regionArr: string[];
 
-  data: any;
-  query: string = '';
-  regionArr = [];
-  constructor(private readonly dashboardService: DashboardServiceService) { }
+  constructor(private readonly dashboardService: DashboardServiceService) {}
 
   ngOnInit(): void {
     this.loadCountries();
   }
 
   loadCountries() {
-    this.dashboardService.getCountries().subscribe(arg => {
-      this.data = arg;
+    this.dashboardService.getCountries().subscribe((arg) => {
+      this.data = arg as ICountries[];
       this.regionArr = this.getRegionArr(arg);
     });
   }
@@ -30,16 +30,20 @@ export class DashboardComponent implements OnInit {
   }
 
   filterByRegion(event: string) {
-    if(event){
-      this.dashboardService.filterByRegion(event).subscribe(res => this.data = res);
-    }else{
+    if (event) {
+      this.dashboardService
+        .filterByRegion(event)
+        .subscribe((res) => (this.data = res as ICountries[]));
+    } else {
       this.loadCountries();
     }
   }
 
-  getRegionArr(data: any) {
-    let regions = data.map((x: { region: any; }) => x.region);
-    return regions.filter((current: any, index: any, arr: string | any[]) => arr.indexOf(current) === index)
+  getRegionArr(data: ICountries[]): string[] {
+    let regions = data.map((country) => country.region);
+    return regions.filter(
+      (current: string, index: number, arr: string[]) =>
+        arr.indexOf(current) === index
+    );
   }
-
 }

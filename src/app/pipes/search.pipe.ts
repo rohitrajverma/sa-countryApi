@@ -1,11 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { ICountries } from '../dashboard/dashboard-services/dashboard.model';
 
 @Pipe({
   name: 'search',
   pure: true
 })
 export class SearchPipe implements PipeTransform {
-  transform(countryInfo: any[], query: string): string[] {
+  transform(countryInfo: ICountries[], query: string): ICountries[] {
     if (!query || !countryInfo) {
       return countryInfo;
     }    

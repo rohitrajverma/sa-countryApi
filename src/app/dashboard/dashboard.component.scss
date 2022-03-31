@@ -17,12 +17,10 @@
   .container {
     flex-direction: column;
   }
-
   .actions {
     flex-direction: column;
     row-gap: 40px;
   }
-
   .cards {
     flex: 100%;
     max-width: 100%;
@@ -34,6 +32,4 @@
     flex-direction: column;
     row-gap: 40px;
   }
-
-
 }

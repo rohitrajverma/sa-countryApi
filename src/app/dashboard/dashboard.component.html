@@ -1,14 +1,11 @@
 <div class="parent">
-
     <div class="actions" *ngIf="data">
         <app-search (searchQuery)="searchQuery($event)"></app-search>
         <app-filter [options]="regionArr" (selected)="filterByRegion($event)"></app-filter>
     </div>
-
     <div class="cards">
         <ng-container *ngFor="let item of data | search: query">
             <app-cards [countryInfo]="item"></app-cards>
         </ng-container>
     </div>
-
 </div>
