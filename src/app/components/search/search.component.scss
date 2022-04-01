@@ -12,19 +12,18 @@
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.left{
+.left {
     position: absolute;
     left: 20px;
     top: 22px;
 }
 
-.box{
+.box {
     position: relative;
 }
 
-
 @media screen and (max-width: 375px) {
     .search-input {
-    width: 100%;
+        width: 100%;
     }
-  }
+}
