@@ -1,6 +1,6 @@
 ::ng-deep .ng-select.ng-select-single .ng-select-container {
     height: 50px;
-    background-color: var(--theme-background);
+    background-color: var(--theme-element);
     color: var(--theme-color);
     outline: none;
     width: 250px;
@@ -12,12 +12,13 @@
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 ::ng-deep .ng-dropdown-panel {
-    background-color: var(--theme-background);
+    background-color: var(--theme-element);
     color: var(--theme-color);
+    border: transparent;
 }
 
 ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
-    background-color: var(--theme-background);
+    background-color: var(--theme-element);
     color: var(--theme-color);
 } 
 

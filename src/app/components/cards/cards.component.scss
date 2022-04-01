@@ -5,13 +5,13 @@
     margin-top: 30px;
 }
 .card {
-    background: var(--theme-background);
+    background: var(--theme-element);
     box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
     overflow: hidden;
     width: 280px;
     height: 350px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .card-header img {
     width: 100%;

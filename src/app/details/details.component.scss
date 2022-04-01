@@ -5,6 +5,9 @@
         margin-bottom: 80px;
         .box {
             position: relative;
+            input {
+                background: var(--theme-element);
+            }
             .left {
                 position: absolute;
                 left: 15px;
@@ -81,6 +84,11 @@
             }
             .details {
                 width: 100%;
+                font-size: 13px;
+                .details-name {
+                    font-size: 24px;
+                    padding: 10px 0;
+                }
                 .details-info {
                     flex-direction: column;
                     row-gap: 50px;
@@ -105,13 +113,16 @@
                 }
             }
             .details {
-                .details-name {                    
-                    padding: 0 0 35px 0;
+                .details-name {
+                    padding: 35px 0;
                 }
                 width: 100%;
                 .details-info {
                     flex-direction: column;
-                    row-gap: 50px;
+                    row-gap: 40px;
+                    div{
+                        padding: 5px 0;
+                    }
                 }
                 .border-countries {
                     span {
@@ -122,5 +133,4 @@
             }
         }
     }
-
 }
