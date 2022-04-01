@@ -20,6 +20,7 @@ import { CapsuleComponent } from './components/capsule/capsule.component';
 import { NativeNamePipe } from './pipes/native-name.pipe';
 import { CurrencyPipe } from './pipes/currency.pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     LoaderComponent,
     CapsuleComponent,
     NativeNamePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
